@@ -1,4 +1,4 @@
-## 测试中文
+## 测试中文字符
 
 You can use the [editor on GitHub](https://github.com/f417/f417.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
