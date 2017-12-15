@@ -1,5 +1,5 @@
 ---
-layout: default
+title: test-blog
 ---
 
 # this is the my first blog
