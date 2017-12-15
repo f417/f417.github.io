@@ -1,4 +1,4 @@
 # 测试首页
 **BOLD**
 
-{% link test.md %}
+[test link](test.md)
