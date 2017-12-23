@@ -29,31 +29,31 @@ function GetQueryString(name)
   var demoContents = [
 	[{
       demo_link: '/album?id=1',
-      img_link: '/images/album/f417_ppt/f417_ppt_1.jpeg',
+      img_link: '/images/album/f417_ppt/f417_ppt_face.jpg',
       title: 'F417幻灯片介绍',
       core_tech: 'F417',
       description: 'F417幻灯片介绍展示图。'
     }, {
       demo_link: '/album?id=2',
-      img_link: '/images/album/f417_show/win7cn_excel2016cn.png',
+      img_link: '/images/album/f417_show/f417_show_face.jpg',
       title: 'F417运行环境展示',
       core_tech: 'F417',
       description: 'F417在各版本Windows、各版本EXCEL运行环境下的展示图。'
     }, {
       demo_link: '/album?id=3',
-      img_link: '/images/album/f417_u417/u417_nav.png',
+      img_link: '/images/album/f417_u417/f417_u417_face.jpg',
       title: 'F417整合U417展示',
       core_tech: 'U417',
       description: 'F417黄金版集成的U417软件运行展示图。'
     }, {
       demo_link: '/album?id=4',
-      img_link: '/images/album/f417_tip/f417_ufauth.png',
+      img_link: '/images/album/f417_tip/f417_tip_face.jpg',
       title: 'F417使用技巧展示',
       core_tech: 'F417',
       description: 'F417各种使用技巧的展示图。'
     }, {
       demo_link: '/album?id=5',
-      img_link: '/images/album/f417_nc6/nc633_calc.png',
+      img_link: '/images/album/f417_nc6/f417_nc6_face.jpg',
       title: 'F417 for NC6',
       core_tech: 'F417 for NC',
       description: 'F417 for NC6软件运行展示图。'
