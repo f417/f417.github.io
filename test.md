@@ -1,6 +1,0 @@
----
----
-
-# Only for Test
-
-*Test*

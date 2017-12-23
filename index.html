@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+<div class="page clearfix" index>
+    <div class="left">
+        <div class="wrap">
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    {{ site.data.links.f417_video_demo }}
+                </div>
+                <ul class="content-ul" recent>
+                    {% for link in site.data.links.f417_video_demo_cate %}
+                        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    {{ site.data.links.f417_free_tool }}
+                </div>
+                <ul class="content-ul" recent>
+                    {% for link in site.data.links.f417_free_tool_cate %}
+                        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- My Cate -->
+            <div class="side ">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    {{ site.data.i18n.categories }}
+                </div>
+                <ul class="content-ul" cate>
+					{% for my_cate in site.pages %}{% if my_cate.type == 'cate' %}
+                    <li>
+                        <a href="{{ root_url }}{{ my_cate.permalink }}" class="categories-list-item" cate="{{ my_cate.category }}">
+                            <span class="name">
+								{{ my_cate.title }}
+                            </span>
+							{% for cate in site.categories %}
+							{% if cate[0] == my_cate.category %}
+                            <span class="badge">{{ cate[1] | size }}</span>
+							{% endif %}
+							{% endfor %}
+                        </a>
+                    </li>
+					{% endif %}{% endfor %}
+                </ul>
+            </div>
+
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    {{ site.data.links.f417_how_buy }}
+                </div>
+                <ul class="content-ul" recent>
+                    {% for link in site.data.links.f417_how_buy_cate %}
+                        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    {{ site.data.links.f417_version_intro }}
+                </div>
+                <ul class="content-ul" recent>
+                    {% for link in site.data.links.f417_version_intro_cate %}
+                        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    {{ site.data.links.f417_contact_me }}
+                </div>
+                <ul class="content-ul" recent>
+                    {% for link in site.data.links.f417_contact_me_cate %}
+                        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- 其他div框放到这里 -->
+
+            <!-- <div class="side">
+                <div>
+                    <i class="fa fa-external-link"></i>
+                    Links
+                </div>
+                <ul  class="content-ul">
+
+                </ul>
+            </div> -->
+        </div>
+    </div>
+    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
+	<div class="right">
+        <h1>F417</h1>
+        <small>F417 IS "UFO、KDS IN EXCEL"</small>
+        <hr>
+        <ul>
+            {% for post in site.categories.f417_new %}
+              <li>
+                <h2>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
+                    </div>
+                    <div class="label-card">
+                        {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
+                        {% endif %}
+                    </div>
+                    <div class="label-card">
+                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
+                    </div>
+
+                    <div class="label-card">
+                    {% include category.html %}
+                    </div>
+
+                    <div class="label-card">
+                    {% include tag.html %}
+                    </div>
+                </div>
+                <div class="excerpt">
+                    {{post.excerpt}}
+                </div>
+                <div class="read-all">
+                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>{{ site.data.i18n.read_all }}&gt;&gt;</a>
+                </div>
+                <hr>
+              </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<!-- <script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+<!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->

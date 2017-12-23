@@ -1,0 +1,31 @@
+{% capture categories %}
+  {% if post %}
+    {% for category in post.categories %}
+		{% assign category_text = category %}
+		{% for my_cate in site.pages %}{% if my_cate.type == 'cate' %}
+			{% if my_cate.category == category %}
+				{% assign category_text = my_cate.title %}
+			{% endif %}
+		{% endif %}{% endfor %}
+        <a href="{{ root_url }}/{{ site.category_dir }}{{ category }}" title="Category: {{ category }}" rel="category">{{ category_text | join: "/" }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+    {% endfor %}
+  {% else %}
+    {% for category in page.categories %}
+		{% assign category_text = category %}
+		{% for my_cate in site.pages %}{% if my_cate.type == 'cate' %}
+			{% if my_cate.category == category %}
+				{% assign category_text = my_cate.title %}
+			{% endif %}
+		{% endif %}{% endfor %}
+        <a href="{{ root_url }}/{{ site.category_dir }}{{ category }}" title="Category: {{ category }}" rel="category">{{ category_text | join: "/" }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endcapture %}
+{% capture category_size %}{{ categories | strip_newlines | replace: ' ', '' | size }}{% endcapture %}
+{% unless category_size == '0' %}
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>{{ categories }}
+  <!-- <span class="point">•</span> -->
+</span>
+{% endunless %}

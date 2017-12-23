@@ -1,0 +1,52 @@
+f417_video_demo: "F417视频教程"
+f417_video_demo_cate:
+  -
+    text: "F417视频教程(基本操作)"
+    url: "http://pan.baidu.com/share/link?shareid=460732&uk=1429144685"
+  -
+    text: "F417视频教程(高级操作)"
+    url: "http://pan.baidu.com/share/link?shareid=464768&uk=1429144685"
+f417_free_tool: "F417免费工具"
+f417_free_tool_cate:
+  -
+    text: "F417免费工具(VBA)"
+    url: "http://pan.baidu.com/s/1sjrwTxb"
+f417_how_buy: "如何购买"
+f417_how_buy_cate:
+  -
+    text: "购买共享版还是黄金版"
+    url: "/blog/f417_buy_uf"
+  -
+    text: "购买F417 for ufsoft 共享版"
+    url: "/blog/f417_buy_uf_share"
+  -
+    text: "购买F417 for ufsoft 黄金版"
+    url: "/blog/f417_buy_uf_gold"
+  -
+    text: "购买F417 for kingdee共享版"
+    url: "/blog/f417_buy_kd_share"
+  -
+    text: "下载最新版本F417"
+    url: "http://f417support.ys168.com/"
+f417_version_intro: "版本介绍"
+f417_version_intro_cate:
+  -
+    text: "F417共享版 for ufsoft"
+    url: "/blog/f417_uf_share"
+  -
+    text: "F417黄金版 for ufsoft"
+    url: "/blog/f417_uf_gold"
+  -
+    text: "F417共享版 for kingdee"
+    url: "/blog/f417_kd_share"
+  -
+    text: "F417共享版 for NC"
+    url: "/blog/f417_nc6_share"
+  -
+    text: "F417预览版 for U9"
+    url: "/blog/f417_u9_prev"
+f417_contact_me: "与我联系"
+f417_contact_me_cate:
+  -
+    text: "邮箱：f417support@163.com"
+    url: "mailto:f417support@163.com"

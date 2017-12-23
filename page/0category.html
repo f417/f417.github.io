@@ -1,0 +1,68 @@
+---
+layout: default
+title: 分类
+permalink: /category/
+icon: th-list
+type: page
+---
+
+<div class="page clearfix">
+    <div class="left">
+        <div class="wrap">
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    {{ site.data.i18n.content }}
+                </div>
+                <ul id="content-side" class="content-ul">
+					{% for my_cate in site.pages %}{% if my_cate.type == 'cate' %}
+					{% assign category_text = my_cate.title %}
+					{% for category in site.categories %}
+						{% if category[0] == my_cate.category %}
+                        <li>
+                            <a data-scroll href="#{{ category | first }}">
+                                {{ category_text }} ({{ category | last | size }})
+                            </a>
+                        </li>
+						{% endif %}
+                    {% endfor %}
+					{% endif %}{% endfor %}
+                </ul>
+            </div>
+
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <h1>{{page.title}}</h1>
+        <hr>
+        <ul>
+			{% for my_cate in site.pages %}{% if my_cate.type == 'cate' %}
+			{% assign category_text = my_cate.title %}
+	        {% for category in site.categories %}
+			{% if category[0] == my_cate.category %}
+            <h2 id="{{category | first}}">{{ category_text }}</h2>
+                {% for posts in category  %}
+                    {% for post in posts %}
+                        {% if post.url %}
+                        <li>
+                            <time>
+                            {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
+                            </time>
+                            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+                            {% include category.html %}
+                            {% include tag.html %}
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+				{% endfor %}
+			{% endif %}
+			{% endfor %}
+            {% endif %}{% endfor %}
+        </ul>
+    </div>
+</div>
+<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
