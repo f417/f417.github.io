@@ -95,6 +95,9 @@ function GetQueryString(name)
 	}],
 	
 	[{
+      img_link: '/images/album/f417_show/win10cn_x64_excel2019cn.png',
+      description: '中文Win10(64位) 中文Excel2019'
+    }, {
       img_link: '/images/album/f417_show/win7cn_excel2016cn.png',
       description: '中文Win7 中文Excel2016'
     }, {
